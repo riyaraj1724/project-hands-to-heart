@@ -1,0 +1,56 @@
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper">
+                <div class="tabs">
+                    <button class="navTab active" id="loginbtn" data-toggle="login" (click)="onClickLogin()">Login</button>
+                    <button class="navTab "  id="registerbtn" data-toggle="register" (click)="onClickRegister()">Register</button>
+                </div>
+                <div class="contentWrapper">
+                    <div class="content active" id="loginform">
+                        <form method="POST" autocomplete="off" (ngSubmit)="loginSubmit()">
+                            <div class="formGroup" > 
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" placeholder="name@example.com" name="email" required [(ngModel)]="email"/>
+                                <small class="messageHelp">
+                                    We'Il never share your email with anyone else
+                                </small>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Password" required name="password" [(ngModel)]="password"/>
+                                <small class="messageHelp">Password incorrect</small>
+                                <div>
+                                    <input type="checkbox" id="checkBox" />
+                                    <span>Keep me Signed in</span>
+                                </div>
+                                <a href="#" id="passwordReset">Forgot password?</a>
+                                <button class="btn btn-log" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="content" id="registerform">
+                        <form action="#" method="POST" autocomplete="off" (ngSubmit)="onRegister()">
+                            <div class="formGroup">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" placeholder="Username" required />
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" placeholder="name@example.com" required
+                                    title="Enter a valid email address" />
+                                <small class="messageHelp">
+                                    Enter a valid email address
+                                </small>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Password" required
+                                    title="Must be at least 6 characters" />
+                                <small class="messageHelp">Must be at least 6 characters</small>
+                                <label for="confirmPassword">Confirm password</label>
+                                <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+                                <small class="messageHelp">Password incorrect</small>
+                                <button class="btn btn-log" type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

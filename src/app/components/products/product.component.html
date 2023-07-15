@@ -1,0 +1,138 @@
+
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="search my-5">
+                    <div id="wrap">
+                      <form action="Products.html" autocomplete="on">
+                        <input id="search" name="search" type="text" placeholder="What're you looking for ?"><input id="search_submit"
+                          value="Rechercher" type="submit">
+                      </form>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+     
+
+      <div class="container">
+        <h2 class="product_heading">For Men's</h2>
+        <hr>
+        <div class="row my-5 d-flex">
+          <div class="box col-sm-3" *ngFor="let product of mens;let i=index">
+            <div class="top">
+              <img src={{product.pImage}} alt="" />
+              <span>&#9829;
+              </span>
+            </div>
+           
+            <div class="bottom">
+              <h3>{{product.pName}}</h3>
+             <p></p>
+              <div>
+                <span class="checked">&#9733;</span>
+                <span class="checked">&#9733;</span>
+                <span class="checked">&#9733;</span>
+                <span class="checked">&#9733;</span>
+                <span class="">&#9733;</span>
+              </div>
+              <div class="price">
+                <span>Buy Now</span>
+                <span> &#8377; {{product.pPrize}}</span>
+                <a class="btn btn-success float-right" (click)="onAddCartItem(product)">{{ product.isCart ? "Go to cart" : "Add to cart"}}</a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+<div class="container">
+    <h2 class="product_heading">For Women's</h2>
+    <hr>
+    <div class="row my-5 d-flex">
+      <div class="box col-sm-3" *ngFor="let product of woMen;let i=index">
+        <div class="top">
+          <img src={{product.pImage}} alt="" />
+          <span>&#9829;
+          </span>
+        </div>
+       
+        <div class="bottom">
+          <h3>{{product.pName}}</h3>
+         <p></p>
+          <div>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="">&#9733;</span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span> &#8377; {{product.pPrize}}</span>
+            <a class="btn btn-success float-right"  (click)="onAddCartItem(product)">{{ product.isCart ? "Go to cart" : "Add to cart"}}</a>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="container">
+    <h2 class="product_heading">Women's Accessories</h2>
+    <hr>
+    <div class="row my-5 d-flex">
+      <div class="box col-sm-3" *ngFor="let product of woMensAcc;let i=index">
+        <div class="top">
+          <img src={{product.pImage}} alt="" />
+          <span>&#9829;
+          </span>
+        </div>
+       
+        <div class="bottom">
+          <h3>{{product.pName}}</h3>
+         <p></p>
+          <div>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="">&#9733;</span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span> &#8377; {{product.pPrize}}</span>
+            <button class="btn btn-success float-right"  (click)="onAddCartItem(product)">{{ product.isCart ? "Go to cart" : "Add to cart"}}</button>
+          </div>
+        </div>
+      </div>
+</div>  
+
+<div class="container">
+    <h2 class="product_heading">Home Decoration</h2>
+    <hr>
+    <div class="row my-5 d-flex">
+      <div class="box col-sm-3" *ngFor="let product of homeDecore;let i=index">
+        <div class="top">
+          <img src={{product.pImage}} alt="" />
+          <span>&#9829;
+          </span>
+        </div>
+       
+        <div class="bottom">
+          <h3>{{product.pName}}</h3>
+         <p></p>
+          <div>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="checked">&#9733;</span>
+            <span class="">&#9733;</span>
+          </div>
+          <div class="price">
+            <span>Buy Now</span>
+            <span> &#8377; {{product.pPrize}}</span>
+            <a class="btn btn-success float-right" (click)="onAddCartItem(product)">{{ product.isCart ? "Go to cart" : "Add to cart" }}</a>
+          </div>
+        </div>
+      </div>
+  </div>

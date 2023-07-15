@@ -1,0 +1,33 @@
+<header>
+    <figure class="brand"><img src="../../../assets/Images/logoh.png" max-height="100px" height="100%" /></figure>
+        <nav class="menu">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+            <ul>
+                <a routerLink="home" class="active" id="home" (click)="onNavigate('home')">
+                    <li>Home</li>
+                </a>
+                <a routerLink="Ourproducts" class="" id = "Ourproducts" (click)="onNavigate('Ourproducts')">
+                    <li>Our Products</li>
+                </a>
+                <a routerLink="about" class="" id = "about" (click)="onNavigate('about')">
+                    <li>About Us</li>
+                </a> 
+                <a routerLink="seller" class="" id = "seller" (click)="onNavigate('seller')">
+                    <li>Become A Saller</li>
+                </a>
+                <a routerLink="contact" class="" id = "contact" (click)="onNavigate('contact')">
+                    <li>Contact Us</li>
+                </a>
+                <a routerLink="cart" class="" id = "cart" (click)="onNavigate('cart')">
+                    <li>Go to cart</li>
+                </a>
+                <a *ngIf="!this.loginServices.accName" routerLink="login" class="" id = "login" (click)="onNavigate('login')">
+                    <li>Log In/Sign Up</li>
+                </a>
+                <a *ngIf="this.loginServices.accName" class="" id = "login" (click)="onNavigate('login')">
+                    <li *ngIf="this.loginServices.accName">Hi {{this.loginServices.accName}}</li>
+                </a>
+            </ul>
+        </nav>
+</header>

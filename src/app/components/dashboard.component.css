@@ -1,0 +1,5 @@
+body {
+    text-rendering: optimizeSpeed;
+     background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    line-height: 1.4;
+  }
