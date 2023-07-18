@@ -14,7 +14,8 @@ export class LoginServices{
         {name :'Log In/Sign Up', id :'login'}
     ]
     accDetails : { email : string, password : string, name : string }[] = [
-        { email : "riya1724@gmail.com", password : "Raj1724@", name : "Riya"}
+        { email : "riya1724@gmail.com", password : "Raj1724@", name : "Riya",
+        email : "manish123@gmail.com", password : "manish123@", name : "Riya"}
        
     ];
 
